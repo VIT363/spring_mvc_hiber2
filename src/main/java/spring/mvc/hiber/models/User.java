@@ -4,24 +4,14 @@ import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 
-
 @Entity
-@Table
+@Table(name = "user")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @NotEmpty(message = "Name can`t be empty")
-    @Column
     private String name;
-
-    @NotEmpty(message = "Last name can`t be empty")
-    @Column
     private String lastName;
-
-    @Min(value = 0, message = "Age should be greater than 0")
-    @Column
     private int age;
 
     public User() {

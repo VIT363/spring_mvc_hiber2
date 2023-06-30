@@ -1,10 +1,10 @@
-package spring.mvc.hiber.services;
+package spring.mvc.hiber.dao;
 
 import spring.mvc.hiber.models.User;
 
 import java.util.List;
 
-public interface UsersService {
+public interface UserDao {
 
     public List<User> findAll();
 
